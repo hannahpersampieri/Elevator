@@ -83,16 +83,19 @@ void Lobby::delegate_requests(){
 			if(direction == "Up" and e.get_curr_floor < next.floor and next.direction == 1){
 				e.process_request(next.floor);
 				requests.pop();
+				e.ride();
 				processed = true;
 			}
 			else if(direction == "Down" and e.get_curr_floor > next.floor and next.direction == 0){
 				e.process_request(next.floor);
 				requests.pop();
+				e.ride();
 				processed = true;
 			}
 			else if(direction == "Idle"){
 				e.process_request(next.floor);
 				requests.pop();
+				e.ride();
 				processed = true;
 			}
 			i++;

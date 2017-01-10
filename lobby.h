@@ -27,7 +27,7 @@ class Lobby {
 	  	Lobby(const Lobby & other);
 	  // Assign operator
 	 	Lobby & operator=(const Lobby & other);
-	 	void generate_request(string direction, int floor);
+	 	void generate_request(string direction_input, int floor);
 	 	queue<int> get_requests();
 	 	bool no_requests();
 	 	vector<Elevator> get_elevators();
